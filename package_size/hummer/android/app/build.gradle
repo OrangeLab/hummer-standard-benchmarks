@@ -7,7 +7,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.test.hummer_demo"
+        applicationId "com.test.hummer_app"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -52,6 +52,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'com.didi.hummer:hummer:0.3.16'
+    implementation 'com.didi.hummer:hummer:0.3.17.2'
 //    implementation 'com.facebook.fbjni:fbjni:0.0.4'
 }
