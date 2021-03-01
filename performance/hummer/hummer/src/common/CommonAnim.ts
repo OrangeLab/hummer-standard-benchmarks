@@ -2,20 +2,38 @@
 import { BasicAnimation, KeyframeAnimation } from '@hummer/hummer-front'
 import { Color } from '../common/CommonColor'
 
-export class PositionAnim extends BasicAnimation {
+export class PositionAnim extends KeyframeAnimation {
     constructor() {
         super("position");
-        this.value = { x: 20, y: 0 };
+        this.keyframes = [{
+            percent: 0,
+            value: { x: 0, y: 0 },
+        }, {
+            percent: 0.5,
+            value: { x: 20, y: 0 },
+        }, {
+            percent: 1,
+            value: { x: 0, y: 0 },
+        }];
         this.repeatCount = -1;
         this.duration = 2;
         this.easing = 'linear';
     }
 }
 
-export class RotationZAnim extends BasicAnimation {
+export class RotationZAnim extends KeyframeAnimation {
     constructor() {
         super("rotationZ");
-        this.value = 360;
+        this.keyframes = [{
+            percent: 0,
+            value: 0,
+        }, {
+            percent: 0.5,
+            value: 360,
+        }, {
+            percent: 1,
+            value: 0,
+        }];
         this.repeatCount = -1;
         this.duration = 2;
         this.easing = 'linear';
