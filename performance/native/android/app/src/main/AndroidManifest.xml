@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ScrollPerformanceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ListPerformanceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AnimationPerformanceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DragPerformanceActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
