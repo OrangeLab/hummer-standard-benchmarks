@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/animation.dart';
 import 'package:flutter_app/scroller.dart';
+import 'package:flutter_app/list.dart';
+import 'package:flutter_app/drag.dart';
 
 class HomeApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -50,6 +52,22 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    void onScrollerClick() {
+      Navigator.push(context, MaterialPageRoute<void>(
+        builder: (BuildContext context) {
+          return ScrollerApp();
+        },
+      ));
+    }
+
+    void onListClick() {
+      Navigator.push(context, MaterialPageRoute<void>(
+        builder: (BuildContext context) {
+          return ListApp();
+        },
+      ));
+    }
+
     void onAnimClick() {
       // Navigator.pushNamed(context, '/a');
       Navigator.push(context, MaterialPageRoute<void>(
@@ -59,10 +77,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ));
     }
 
-    void onScrollerClick() {
+    void onDragClick() {
       Navigator.push(context, MaterialPageRoute<void>(
         builder: (BuildContext context) {
-          return ScrollerApp();
+          return DragApp();
         },
       ));
     }
@@ -110,9 +128,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // Center is a layout widget. It takes a single child and positions it
           // in the middle of the parent.
           children: <Widget>[
-            buildItemRow('Animation', onAnimClick),
-            buildItemRow('List', onScrollerClick),
-            buildItemRow('Scroller', onScrollerClick),
+            buildItemRow('列表基准测试（Scroller）', onScrollerClick),
+            buildItemRow('列表基准测试（List）', onListClick),
+            buildItemRow('动画基准测试', onAnimClick),
+            buildItemRow('拖拽基准测试', onDragClick),
           ],
         ),
       ),
