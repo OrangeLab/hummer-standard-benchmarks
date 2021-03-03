@@ -18,13 +18,27 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
     private WXSDKInstance mWXSDKInstance;
     private Handler mHandler = new Handler();
 
+    private String mBundleAssetsName = "index.js";
+//    private String mBundleAssetsName = "components/scroller.js";
+//    private String mBundleAssetsName = "components/list.js";
+//    private String mBundleAssetsName = "components/animation.js";
+//    private String mBundleAssetsName = "components/drag.js";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
 
+        initData();
+
         createInstance();
         asyncRenderPage();
+    }
+
+    private void initData() {
+        if (getIntent() != null && getIntent().hasExtra("BundleName")) {
+            mBundleAssetsName = getIntent().getStringExtra("BundleName");
+        }
     }
 
     private void asyncRenderPage() {
@@ -58,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
 //        mWXSDKInstance.renderByUrl(pageName, bundleUrl, null, null, WXRenderStrategy.APPEND_ASYNC);
 
         // 本地加载
-        String bundleContent = WXFileUtils.loadAsset("index.bundle.wx", this);
+        String bundleContent = WXFileUtils.loadAsset(mBundleAssetsName, this);
         mWXSDKInstance.render(pageName, bundleContent, null, null, WXRenderStrategy.APPEND_ASYNC);
     }
 

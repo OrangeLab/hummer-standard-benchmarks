@@ -16,7 +16,7 @@ class RootView extends View {
             height: '100%',
         }
 
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < 500; i++) {
             scroller.appendChild(new ItemLayout(i));
         }
 

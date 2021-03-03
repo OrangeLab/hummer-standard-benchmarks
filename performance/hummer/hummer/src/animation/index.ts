@@ -25,7 +25,7 @@ class RootView extends Scroller {
       flexDirection: 'row',
     }
 
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 1000; i++) {
       let item = new View();
       item.style = {
         width: 34,

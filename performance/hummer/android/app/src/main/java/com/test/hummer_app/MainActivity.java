@@ -28,7 +28,7 @@ public class MainActivity extends HummerActivity {
         }
 
         // 渲染JS页面
-//        hmRender.renderWithAssets("index.js");
-        hmRender.renderWithUrl("http://172.23.160.32:8001/home.js");
+        hmRender.renderWithAssets("home.js");
+//        hmRender.renderWithUrl("http://172.23.160.223:8001/home.js");
     }
 }
