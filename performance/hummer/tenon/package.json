@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "benchmark for tenon vue",
+  "author": "duanlikang <duanlikang@didichuxing.com>",
+  "scripts": {
+    "build": "hummer build",
+    "dev": "hummer dev",
+    "debug": "npm run dev & hummer debug"
+  },
+  "dependencies": {
+    "@hummer/tenon-store": "^1.0.0",
+    "@hummer/tenon-vue": "^1.0.0",
+    "@hummer/vue-plugin-list": "^0.2.0"
+  },
+  "devDependencies": {}
+}
