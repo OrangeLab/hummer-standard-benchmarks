@@ -1,3 +1,235 @@
 // { "framework": "Vue"} 
 
-!function(e){function t(o){if(n[o])return n[o].exports;var s=n[o]={i:o,l:!1,exports:{}};return e[o].call(s.exports,s,s.exports,t),s.l=!0,s.exports}var n={};t.m=e,t.c=n,t.d=function(e,n,o){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:o})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=34)}({34:function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var s=n(35),r=o(s);r.default.el="#root",new Vue(r.default)},35:function(e,t,n){var o,s,r=[];r.push(n(36)),o=n(37);var i=n(38);s=o=o||{},"object"!=typeof o.default&&"function"!=typeof o.default||(s=o=o.default),"function"==typeof s&&(s=s.options),s.render=i.render,s.staticRenderFns=i.staticRenderFns,s._scopeId="data-v-bfdc8978",s.style=s.style||{},r.forEach(function(e){for(var t in e)s.style[t]=e[t]}),"function"==typeof __register_static_styles__&&__register_static_styles__(s._scopeId,r),e.exports=o},36:function(e,t){e.exports={"drag-target":{width:200,height:200,backgroundColor:"#15D0B4",position:"absolute"}}},37:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"Drag",data:function(){return{event:"",positionStyle:Object.create(null),previewPageX:-1,previewPageY:-1,firstTouch:!0,offsetX:0,offsetY:0,index:0,moving:!1}},methods:{handleMove:function(e){if(this.event=e,this.firstTouch)return this.firstTouch=!1,this.previewPageX=e.changedTouches[0].pageX,void(this.previewPageY=e.changedTouches[0].pageY);var t=e.changedTouches[0].pageX-this.previewPageX,n=e.changedTouches[0].pageY-this.previewPageY;this.offsetX=this.offsetX+t,this.offsetY=this.offsetY+n,this.positionStyle={left:this.offsetX,top:this.offsetY},this.moving=!0,this.previewPageX=e.changedTouches[0].pageX,this.previewPageY=e.changedTouches[0].pageY},handleEnd:function(){this.firstTouch=!0}}}},38:function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:["drag-wrapper"]},[n("div",{staticClass:["drag-target"],style:e.positionStyle,on:{touchmove:e.handleMove,touchend:e.handleEnd}})])},staticRenderFns:[]}}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 34);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 34:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _drag = __webpack_require__(35);
+
+var _drag2 = _interopRequireDefault(_drag);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_drag2.default.el = '#root';
+new Vue(_drag2.default);
+
+/***/ }),
+
+/***/ 35:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(36)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(37)
+
+/* template */
+var __vue_template__ = __webpack_require__(38)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/XiaoFeng/work/Android/DiDi/OpenSource/hummer-standard-benchmarks/performance/weex/vue/src/components/drag.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-bfdc8978"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "drag-target": {
+    "width": 200,
+    "height": 200,
+    "backgroundColor": "#15D0B4",
+    "position": "absolute"
+  }
+}
+
+/***/ }),
+
+/***/ 37:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+  name: 'Drag',
+  data: function data() {
+    return {
+      event: '',
+      positionStyle: Object.create(null),
+      previewPageX: -1,
+      previewPageY: -1,
+      firstTouch: true,
+      offsetX: 0,
+      offsetY: 0,
+      index: 0,
+      moving: false
+    };
+  },
+
+  methods: {
+    handleMove: function handleMove(e) {
+      // if (this.moving) {
+      //   return
+      // }
+      this.event = e;
+      if (this.firstTouch) {
+        this.firstTouch = false;
+        this.previewPageX = e.changedTouches[0].pageX;
+        this.previewPageY = e.changedTouches[0].pageY;
+        return;
+      }
+      var left = e.changedTouches[0].pageX - this.previewPageX;
+      var top = e.changedTouches[0].pageY - this.previewPageY;
+      this.offsetX = this.offsetX + left;
+      this.offsetY = this.offsetY + top;
+      this.positionStyle = {
+        left: this.offsetX,
+        top: this.offsetY
+      };
+      this.moving = true;
+      // setTimeout(() => {
+      //   this.moving = false
+      // }, 16)
+
+      this.previewPageX = e.changedTouches[0].pageX;
+      this.previewPageY = e.changedTouches[0].pageY;
+    },
+    handleEnd: function handleEnd() {
+      this.firstTouch = true;
+    }
+  }
+};
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["drag-wrapper"]
+  }, [_c('div', {
+    staticClass: ["drag-target"],
+    style: _vm.positionStyle,
+    on: {
+      "touchmove": _vm.handleMove,
+      "touchend": _vm.handleEnd
+    }
+  })])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ })
+
+/******/ });

@@ -537,6 +537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var ITEM_COUNT = 500;
 
 var RootView = /*#__PURE__*/function (_Scroller) {
   (0,_usr_local_lib_node_modules_hummer_cli_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_1__.default)(RootView, _Scroller);
@@ -567,7 +568,7 @@ var RootView = /*#__PURE__*/function (_Scroller) {
       flexDirection: 'row'
     };
 
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < ITEM_COUNT; i++) {
       var item = new _hummer_hummer_front__WEBPACK_IMPORTED_MODULE_3__.View();
       item.style = {
         width: 34,

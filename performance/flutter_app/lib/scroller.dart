@@ -74,19 +74,7 @@ class _MyHomePageState extends State<MyHomePage>
   }
 
   Widget buildAnimItem(int columnIndex, int itemIndex) {
-    itemIndex = itemIndex % 5;
-    if (itemIndex == 0) {
-      return makeSlideAnim(columnIndex);
-    } else if (itemIndex == 1) {
-      return makeRotationAnim(columnIndex);
-    } else if (itemIndex == 2) {
-      return makeScaleAnim(columnIndex);
-    } else if (itemIndex == 3) {
-      return makeFadeAnim(columnIndex);
-    } else if (itemIndex == 4) {
-      return makeBackgroundColorAnim(columnIndex);
-    }
-    return makeSlideAnim(columnIndex);
+    return buildItem(columnIndex);
   }
 
   Widget makeSlideAnim(int index) {
@@ -135,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage>
       body: Container(
         child: SingleChildScrollView(
           child: Column(
-            children: List.generate(200, (columnIndex) {
+            children: List.generate(500, (columnIndex) {
               return Container(
                 height: 48,
                 color: Color(0x2215D0B4),

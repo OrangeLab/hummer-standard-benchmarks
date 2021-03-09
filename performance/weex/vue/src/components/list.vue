@@ -30,7 +30,7 @@ export default {
   },
   data () {
     return {
-      aniArr: new Array(200)
+      aniArr: new Array(1000)
     }
   }
 }

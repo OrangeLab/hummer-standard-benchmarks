@@ -6,10 +6,12 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+
 public class DragPerformanceActivity extends AppCompatActivity {
 
-    private float downx = -1;
-    private float downy = -1;
+    private float downX = -1;
+    private float downY = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,22 +22,22 @@ public class DragPerformanceActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        View drawView = findViewById(R.id.drag_view);
-        drawView.setOnTouchListener((view, event) -> {
+        View itemView = findViewById(R.id.drag_view);
+        itemView.setOnTouchListener((view, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    if (downx < 0) {
-                        downx = event.getRawX();
+                    if (downX < 0) {
+                        downX = event.getRawX();
                     }
-                    if (downy < 0) {
-                        downy = event.getRawY();
+                    if (downY < 0) {
+                        downY = event.getRawY();
                     }
                     break;
                 case MotionEvent.ACTION_MOVE:
-                    float moveX = event.getRawX() - downx;
-                    float moveY = event.getRawY() - downy;
-                    drawView.setTranslationX(moveX);
-                    drawView.setTranslationY(moveY);
+                    float moveX = event.getRawX() - downX;
+                    float moveY = event.getRawY() - downY;
+                    itemView.setTranslationX(moveX);
+                    itemView.setTranslationY(moveY);
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:

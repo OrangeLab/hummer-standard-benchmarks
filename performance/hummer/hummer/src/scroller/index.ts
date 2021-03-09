@@ -2,6 +2,8 @@ import { Hummer, View, Text, Scroller } from '@hummer/hummer-front'
 import { Color } from '../common/CommonColor'
 import { BackgroundColorAnim, OpacityAnim, PositionAnim, RotationZAnim, ScaleAnim } from '../common/CommonAnim'
 
+const ITEM_COUNT = 500;
+
 class RootView extends View {
     constructor() {
         super();
@@ -16,7 +18,7 @@ class RootView extends View {
             height: '100%',
         }
 
-        for (let i = 0; i < 500; i++) {
+        for (let i = 0; i < ITEM_COUNT; i++) {
             scroller.appendChild(new ItemLayout(i));
         }
 
@@ -41,11 +43,6 @@ class ItemLayout extends View {
         let item3 = new ItemCell(index);
         let item4 = new ItemCell(index);
         let item5 = new ItemCell(index);
-        item1.addAnimation(new PositionAnim(), 'item1');
-        item2.addAnimation(new RotationZAnim(), 'item2');
-        item3.addAnimation(new ScaleAnim(), 'item3');
-        item4.addAnimation(new OpacityAnim(), 'item4');
-        item5.addAnimation(new BackgroundColorAnim(), 'item5');
 
         this.appendChild(item1);
         this.appendChild(item2);

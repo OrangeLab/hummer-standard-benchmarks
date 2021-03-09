@@ -13,31 +13,31 @@
 </template>
 
 <script>
-import AnimationBackground from '@/components/animationBackground'
-import AnimationPosition from '@/components/animationPosition'
-import AnimationOpacity from '@/components/animationOpacity'
-import AnimationRotate from '@/components/animationRotate'
-import AnimationScale from '@/components/AnimationScale'
+import AnimationBackground from "@/components/animationBackground";
+import AnimationPosition from "@/components/animationPosition";
+import AnimationOpacity from "@/components/animationOpacity";
+import AnimationRotate from "@/components/animationRotate";
+import AnimationScale from "@/components/AnimationScale";
 
 export default {
-  name: 'Animation',
+  name: "Animation",
   components: {
     AnimationBackground,
     AnimationPosition,
     AnimationOpacity,
     AnimationRotate,
-    AnimationScale
+    AnimationScale,
   },
-  data () {
+  data() {
     return {
-      aniArr: new Array(200)
-    }
-  }
-}
+      aniArr: new Array(500),
+    };
+  },
+};
 </script>
 
 <style scoped>
-.animation-wrapper{
+.animation-wrapper {
   flex-direction: row;
   /* flex-wrap: wrap; */
 }

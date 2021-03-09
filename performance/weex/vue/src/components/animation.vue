@@ -1,43 +1,43 @@
 <template>
   <scroller class="scroller">
-  <div class="animation-wrapper">
-    <div v-for="(item, index) in aniArr" :key="index">
-      <AnimationBackground v-if="index%5===0"></AnimationBackground>
-      <AnimationPosition v-if="index%5===1"></AnimationPosition>
-      <AnimationOpacity v-if="index%5===2"></AnimationOpacity>
-      <AnimationRotate v-if="index%5===3"></AnimationRotate>
-      <AnimationScale v-if="index%5===4"></AnimationScale>
+    <div class="animation-wrapper">
+      <div v-for="(item, index) in aniArr" :key="index">
+        <AnimationBackground v-if="index % 5 === 0"></AnimationBackground>
+        <AnimationPosition v-if="index % 5 === 1"></AnimationPosition>
+        <AnimationOpacity v-if="index % 5 === 2"></AnimationOpacity>
+        <AnimationRotate v-if="index % 5 === 3"></AnimationRotate>
+        <AnimationScale v-if="index % 5 === 4"></AnimationScale>
+      </div>
     </div>
-  </div>
   </scroller>
 </template>
 
 <script>
-import AnimationBackground from '@/components/animationBackground'
-import AnimationPosition from '@/components/animationPosition'
-import AnimationOpacity from '@/components/animationOpacity'
-import AnimationRotate from '@/components/animationRotate'
-import AnimationScale from '@/components/AnimationScale'
+import AnimationBackground from "@/components/animationBackground";
+import AnimationPosition from "@/components/animationPosition";
+import AnimationOpacity from "@/components/animationOpacity";
+import AnimationRotate from "@/components/animationRotate";
+import AnimationScale from "@/components/AnimationScale";
 
 export default {
-  name: 'Animation',
+  name: "Animation",
   components: {
     AnimationBackground,
     AnimationPosition,
     AnimationOpacity,
     AnimationRotate,
-    AnimationScale
+    AnimationScale,
   },
-  data () {
+  data() {
     return {
-      aniArr: new Array(200)
-    }
-  }
-}
+      aniArr: new Array(500),
+    };
+  },
+};
 </script>
 
 <style scoped>
-.animation-wrapper{
+.animation-wrapper {
   flex-direction: row;
   flex-wrap: wrap;
 }

@@ -135,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage>
         padding: EdgeInsets.symmetric(vertical: 8.0),
         child: SingleChildScrollView(
           child: Wrap(
-            children: List.generate(200, (index) {
+            children: List.generate(500, (index) {
               return buildAnimItem(index);
             }),
           ),

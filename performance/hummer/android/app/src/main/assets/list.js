@@ -567,6 +567,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var ITEM_COUNT = 1000;
 
 var RootView = /*#__PURE__*/function (_View) {
   (0,_usr_local_lib_node_modules_hummer_cli_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_2__.default)(RootView, _View);
@@ -608,7 +609,7 @@ var RootView = /*#__PURE__*/function (_View) {
 
     _this.appendChild(listView);
 
-    listView.refresh(1000);
+    listView.refresh(ITEM_COUNT);
     return _this;
   }
 

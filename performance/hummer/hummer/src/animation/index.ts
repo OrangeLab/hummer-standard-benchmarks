@@ -2,6 +2,8 @@ import { Hummer, View, Scroller, BasicAnimation, KeyframeAnimation } from '@humm
 import { Color } from '../common/CommonColor'
 import { BackgroundColorAnim, OpacityAnim, PositionAnim, RotationZAnim, ScaleAnim } from '../common/CommonAnim'
 
+const ITEM_COUNT = 500;
+
 class RootView extends Scroller {
   constructor() {
     super();
@@ -25,7 +27,7 @@ class RootView extends Scroller {
       flexDirection: 'row',
     }
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < ITEM_COUNT; i++) {
       let item = new View();
       item.style = {
         width: 34,

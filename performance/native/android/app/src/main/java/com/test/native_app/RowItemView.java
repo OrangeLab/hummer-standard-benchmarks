@@ -52,8 +52,6 @@ public class RowItemView extends LinearLayout {
             tv.setLayoutParams(lp2);
 
             addView(tv);
-
-            AnimUtil.startAnimation(tv, i);
         }
     }
 

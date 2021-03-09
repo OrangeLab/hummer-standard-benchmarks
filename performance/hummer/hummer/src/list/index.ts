@@ -2,6 +2,8 @@ import { Hummer, View, Text, List } from '@hummer/hummer-front'
 import { Color } from '../common/CommonColor'
 import { BackgroundColorAnim, OpacityAnim, PositionAnim, RotationZAnim, ScaleAnim } from '../common/CommonAnim'
 
+const ITEM_COUNT = 1000;
+
 class RootView extends View {
     constructor() {
         super();
@@ -34,7 +36,7 @@ class RootView extends View {
 
         this.appendChild(listView);
 
-        listView.refresh(1000);
+        listView.refresh(ITEM_COUNT);
     }
 }
 
@@ -61,11 +63,6 @@ class ItemLayout extends View {
         this.item3 = new ItemCell();
         this.item4 = new ItemCell();
         this.item5 = new ItemCell();
-        this.item1.addAnimation(new PositionAnim(), 'item1');
-        this.item2.addAnimation(new RotationZAnim(), 'item2');
-        this.item3.addAnimation(new ScaleAnim(), 'item3');
-        this.item4.addAnimation(new OpacityAnim(), 'item4');
-        this.item5.addAnimation(new BackgroundColorAnim(), 'item5');
 
         this.appendChild(this.item1);
         this.appendChild(this.item2);

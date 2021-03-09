@@ -537,6 +537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var ITEM_COUNT = 500;
 
 var RootView = /*#__PURE__*/function (_View) {
   (0,_usr_local_lib_node_modules_hummer_cli_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_1__.default)(RootView, _View);
@@ -559,7 +560,7 @@ var RootView = /*#__PURE__*/function (_View) {
       height: '100%'
     };
 
-    for (var i = 0; i < 500; i++) {
+    for (var i = 0; i < ITEM_COUNT; i++) {
       scroller.appendChild(new ItemLayout(i));
     }
 

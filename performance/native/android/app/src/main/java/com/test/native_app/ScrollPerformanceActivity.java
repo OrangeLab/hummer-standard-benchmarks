@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ScrollPerformanceActivity extends AppCompatActivity {
 
-    private static final int SCROLL_COUNT = 200;
+    private static final int ITEM_COUNT = 500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class ScrollPerformanceActivity extends AppCompatActivity {
 
     private void initView() {
         LinearLayout scrollLayout = findViewById(R.id.scroll_layout);
-        for (int i = 0; i < SCROLL_COUNT; i++) {
+        for (int i = 0; i < ITEM_COUNT; i++) {
             RowItemView itemView = new RowItemView(this);
             itemView.setText(String.valueOf(i));
             scrollLayout.addView(itemView);
