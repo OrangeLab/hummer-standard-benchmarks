@@ -2,11 +2,11 @@
   <scroller class="scroller">
     <div class="animation-wrapper">
       <div v-for="(item, index) in aniArr" :key="index">
-        <AnimationBackground v-if="index % 5 === 0"></AnimationBackground>
-        <AnimationPosition v-if="index % 5 === 1"></AnimationPosition>
-        <AnimationOpacity v-if="index % 5 === 2"></AnimationOpacity>
-        <AnimationRotate v-if="index % 5 === 3"></AnimationRotate>
-        <AnimationScale v-if="index % 5 === 4"></AnimationScale>
+        <AnimationPosition v-if="index % 5 === 0"></AnimationPosition>
+        <AnimationRotate v-if="index % 5 === 1"></AnimationRotate>
+        <AnimationScale v-if="index % 5 === 2"></AnimationScale>
+        <AnimationOpacity v-if="index % 5 === 3"></AnimationOpacity>
+        <AnimationBackground v-if="index % 5 === 4"></AnimationBackground>
       </div>
     </div>
   </scroller>

@@ -62,43 +62,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 44);
+/******/ 	return __webpack_require__(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 44:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _drag = __webpack_require__(45);
-
-var _drag2 = _interopRequireDefault(_drag);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_drag2.default.el = '#root';
-new Vue(_drag2.default);
-
-/***/ }),
-
-/***/ 45:
+/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(46)
+__vue_styles__.push(__webpack_require__(17)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(47)
+__vue_exports__ = __webpack_require__(18)
 
 /* template */
-var __vue_template__ = __webpack_require__(48)
+var __vue_template__ = __webpack_require__(19)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -110,10 +93,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/didi/Desktop/Tenon/hummer-standard-benchmarks/performance/weex/vue/src/components/drag.vue"
+__vue_options__.__file = "/Users/didi/Desktop/Tenon/hummer-standard-benchmarks/performance/weex/vue/src/components/baseCube.vue"
 __vue_options__.render = __vue_template__.render
+__vue_options__["@render"] = __vue_template__["@render"]
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-bfdc8978"
+__vue_options__._scopeId = "data-v-7e751094"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -129,21 +113,25 @@ module.exports = __vue_exports__
 
 /***/ }),
 
-/***/ 46:
+/***/ 17:
 /***/ (function(module, exports) {
 
 module.exports = {
-  "drag-target": {
-    "width": 200,
-    "height": 200,
+  "opacity-animation-wrapper": {
+    "width": 70,
+    "height": 70,
+    "marginTop": 0,
+    "marginRight": 30,
+    "marginBottom": 0,
+    "marginLeft": 30,
     "backgroundColor": "#15D0B4",
-    "position": "absolute"
+    "justifyContent": "center"
   }
 }
 
 /***/ }),
 
-/***/ 47:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -158,77 +146,67 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 
 exports.default = {
-  name: 'Drag',
-  data: function data() {
-    return {
-      event: '',
-      positionStyle: Object.create(null),
-      previewPageX: -1,
-      previewPageY: -1,
-      firstTouch: true,
-      offsetX: 0,
-      offsetY: 0,
-      index: 0,
-      moving: false
-    };
-  },
-
-  methods: {
-    handleMove: function handleMove(e) {
-      // if (this.moving) {
-      //   return
-      // }
-      this.event = e;
-      if (this.firstTouch) {
-        this.firstTouch = false;
-        this.previewPageX = e.changedTouches[0].pageX;
-        this.previewPageY = e.changedTouches[0].pageY;
-        return;
-      }
-      var left = e.changedTouches[0].pageX - this.previewPageX;
-      var top = e.changedTouches[0].pageY - this.previewPageY;
-      this.offsetX = this.offsetX + left;
-      this.offsetY = this.offsetY + top;
-      this.positionStyle = {
-        left: this.offsetX,
-        top: this.offsetY
-      };
-      this.moving = true;
-      // setTimeout(() => {
-      //   this.moving = false
-      // }, 16)
-
-      this.previewPageX = e.changedTouches[0].pageX;
-      this.previewPageY = e.changedTouches[0].pageY;
-    },
-    handleEnd: function handleEnd() {
-      this.firstTouch = true;
-    }
+  name: 'BaseCube',
+  props: {
+    index: Number,
+    default: -1
   }
 };
 
 /***/ }),
 
-/***/ 48:
+/***/ 19:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: ["drag-wrapper"]
-  }, [_c('div', {
-    staticClass: ["drag-target"],
-    style: _vm.positionStyle,
-    on: {
-      "touchmove": _vm.handleMove,
-      "touchend": _vm.handleEnd
+    staticClass: ["opacity-animation-wrapper"]
+  }, [(_vm.index > -1) ? _c('text', {
+    staticStyle: {
+      textAlign: "center"
+    }
+  }, [_vm._v(_vm._s(_vm.index))]) : _vm._e()])
+},"@render":function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["opacity-animation-wrapper"],
+    attrs: {
+      "@isComponentRoot": true,
+      "@templateId": _vm._uid,
+      "@componentProps": _vm.$props || {}
+    }
+  }, [_c('text', {
+    staticStyle: {
+      textAlign: "center"
+    },
+    attrs: {
+      "[[match]]": "index>-1",
+      "value": {
+        "@binding": "index"
+      }
     }
   })])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
+
+/***/ }),
+
+/***/ 43:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _baseCube = __webpack_require__(16);
+
+var _baseCube2 = _interopRequireDefault(_baseCube);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_baseCube2.default.el = '#root';
+new Vue(_baseCube2.default);
 
 /***/ })
 

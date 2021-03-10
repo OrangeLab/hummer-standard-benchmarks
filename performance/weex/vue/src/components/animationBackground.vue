@@ -63,5 +63,6 @@ export default {
     height: 70;
     margin: 10;
     background-color: #15D0B4;
+    justify-content: center;
   }
 </style>

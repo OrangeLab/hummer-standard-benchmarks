@@ -34,13 +34,13 @@ export default {
   },
   methods: {
     jumpPage (e) {
-      var uurl = weex.config.bundleUrl
-      var uurls = uurl.split(':')
-      var ports = uurls[2]
-      ports = ports.split('/')
-      var hrefs = uurls[0] + ':' + uurls[1] + ':' + ports[0] + '/'
+      // var uurl = weex.config.bundleUrl
+      // var uurls = uurl.split(':')
+      // var ports = uurls[2]
+      // ports = ports.split('/')
+      // var hrefs = uurls[0] + ':' + uurls[1] + ':' + ports[0] + '/'
       navigator.push({
-        url: hrefs + 'dist/' + e
+        url: '/' + e
       }, event => {
         console.log('callback: ', event)
       })
@@ -53,15 +53,17 @@ export default {
 .button{
   height: 48wx;
   background-color: #15D0B4;
-  margin-top: 8wx;
+  margin-top: 20wx;
   margin-left: 8wx;
   margin-right: 8wx;
   border-radius: 8wx;
+  align-items: center;
+  justify-content: center;
 }
 .btn-text{
   text-align: center;
-  color: white;
   font-size: 20wx;
-  margin-top: 12wx;
+  justify-content: center;
+  /* vertical-align: middle; */
 }
 </style>

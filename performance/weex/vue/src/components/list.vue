@@ -2,31 +2,23 @@
     <list>
       <cell v-for="(item, index) in aniArr" :key="index">
         <div class="animation-wrapper">
-          <AnimationBackground :index="index"></AnimationBackground>
-          <AnimationPosition :index="index"></AnimationPosition>
-          <AnimationOpacity :index="index"></AnimationOpacity>
-          <AnimationRotate :index="index"></AnimationRotate>
-          <AnimationScale :index="index"></AnimationScale>
+          <BaseCube :index="index"></BaseCube>
+          <BaseCube :index="index"></BaseCube>
+          <BaseCube :index="index"></BaseCube>
+          <BaseCube :index="index"></BaseCube>
+          <BaseCube :index="index"></BaseCube>
         </div>
       </cell>
     </list>
 </template>
 
 <script>
-import AnimationBackground from '@/components/animationBackground'
-import AnimationPosition from '@/components/animationPosition'
-import AnimationOpacity from '@/components/animationOpacity'
-import AnimationRotate from '@/components/animationRotate'
-import AnimationScale from '@/components/AnimationScale'
+import BaseCube from '@/components/baseCube'
 
 export default {
-  name: 'Animation',
+  name: 'list',
   components: {
-    AnimationBackground,
-    AnimationPosition,
-    AnimationOpacity,
-    AnimationRotate,
-    AnimationScale
+    BaseCube
   },
   data () {
     return {
@@ -39,6 +31,10 @@ export default {
 <style scoped>
 .animation-wrapper{
   flex-direction: row;
+  align-items: center;
+  margin-top: 20;
+  padding: 20 0;
+  background-color: #dcf5f1;
   /* flex-wrap: wrap; */
 }
 </style>
