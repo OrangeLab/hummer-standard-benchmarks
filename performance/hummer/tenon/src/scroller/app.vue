@@ -1,32 +1,24 @@
 <template>
   <scroller class="scroller">
     <view class="animation-wrapper" v-for="(item, index) in aniArr" :key="index">
-      <AnimationBackground :index=index></AnimationBackground>
-      <AnimationPosition :index=index></AnimationPosition>
-      <AnimationOpacity :index=index></AnimationOpacity>
-      <AnimationRotate :index=index></AnimationRotate>
-      <AnimationScale :index=index></AnimationScale>
+      <BaseCube :index=index></BaseCube>
+      <BaseCube :index=index></BaseCube>
+      <BaseCube :index=index></BaseCube>
+      <BaseCube :index=index></BaseCube>
+      <BaseCube :index=index></BaseCube>
     </view>
   </scroller>
 </template>
 
 <script>
-import AnimationBackground from '../components/animationBackground'
-import AnimationPosition from '../components/animationPosition'
-import AnimationOpacity from '../components/animationOpacity'
-import AnimationRotate from '../components/animationRotate'
-import AnimationScale from '../components/AnimationScale'
+import BaseCube from '../components/baseCube'
 
-const ARRAY_LENGTH = 200;
+const ARRAY_LENGTH = 500;
 
 export default {
   name: 'Animation',
   components: {
-    AnimationBackground,
-    AnimationPosition,
-    AnimationOpacity,
-    AnimationRotate,
-    AnimationScale
+    BaseCube
   },
   data () {
     return {

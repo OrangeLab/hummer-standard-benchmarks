@@ -13,11 +13,11 @@
       </template>
       <template v-slot:item="item">
         <view class="list-item">
-          <AnimationBackground :index=item.index></AnimationBackground>
-          <AnimationPosition :index=item.index></AnimationPosition>
-          <AnimationOpacity :index=item.index></AnimationOpacity>
-          <AnimationRotate :index=item.index></AnimationRotate>
-          <AnimationScale :index=item.index></AnimationScale>
+          <BaseCube :index=item.index></BaseCube>
+          <BaseCube :index=item.index></BaseCube>
+          <BaseCube :index=item.index></BaseCube>
+          <BaseCube :index=item.index></BaseCube>
+          <BaseCube :index=item.index></BaseCube>
         </view>
       </template>
     </ex-list>
@@ -40,31 +40,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10;
+    padding: 10 0;
+    background-color: #dcf5f1;
   }
 </style>
 
 <script>
 
-import AnimationBackground from '../components/animationBackground'
-import AnimationPosition from '../components/animationPosition'
-import AnimationOpacity from '../components/animationOpacity'
-import AnimationRotate from '../components/animationRotate'
-import AnimationScale from '../components/AnimationScale'
+import BaseCube from '../components/baseCube'
 
 export default {
   pageConfig: {
     canScroll: false
   },
   components: {
-    AnimationBackground,
-    AnimationPosition,
-    AnimationOpacity,
-    AnimationRotate,
-    AnimationScale
+    BaseCube
   },
   data(){
     return {
-      list: new Array(200)
+      list: new Array(1000)
     }
   }
 }
