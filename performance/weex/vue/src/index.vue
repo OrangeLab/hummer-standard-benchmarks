@@ -34,13 +34,17 @@ export default {
   },
   methods: {
     jumpPage (e) {
-      // var uurl = weex.config.bundleUrl
-      // var uurls = uurl.split(':')
-      // var ports = uurls[2]
-      // ports = ports.split('/')
-      // var hrefs = uurls[0] + ':' + uurls[1] + ':' + ports[0] + '/'
+      let uurls,ports,hrefs,targetUrl
+      let uurl = weex.config.bundleUrl
+      if (uurl) {
+        uurls = uurl.split(':')
+        ports = uurls[2]
+        ports = ports.split('/')
+        hrefs = uurls[0] + ':' + uurls[1] + ':' + ports[0] + '/'
+      }
+      targetUrl = hrefs ? (hrefs + 'dist/' + e) : e
       navigator.push({
-        url: '/' + e
+        url: targetUrl
       }, event => {
         console.log('callback: ', event)
       })

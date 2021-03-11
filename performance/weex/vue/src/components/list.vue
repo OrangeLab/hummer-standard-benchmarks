@@ -32,6 +32,7 @@ export default {
 .animation-wrapper{
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   margin-top: 20;
   padding: 20 0;
   background-color: #dcf5f1;

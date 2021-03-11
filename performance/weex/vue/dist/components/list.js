@@ -262,6 +262,7 @@ module.exports = {
   "animation-wrapper": {
     "flexDirection": "row",
     "alignItems": "center",
+    "justifyContent": "center",
     "marginTop": 20,
     "paddingTop": 20,
     "paddingRight": 0,
