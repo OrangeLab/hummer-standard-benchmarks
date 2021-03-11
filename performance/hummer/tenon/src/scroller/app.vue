@@ -30,7 +30,12 @@ export default {
 
 <style scoped>
 .animation-wrapper{
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10;
+  padding: 10 0;
+  background-color: #dcf5f1;
 }
 </style>

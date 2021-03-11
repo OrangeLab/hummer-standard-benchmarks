@@ -96,12 +96,7 @@ const render = /*#__PURE__*/_withId((_ctx, _cache) => {
       class: "demo-item",
       style: _ctx.curPositionStyle,
       onPan: _ctx.handlePan
-    }, [
-      (0,_hummer_tenon_vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("image", {
-        class: "image-item",
-        src: "https://pt-starimg.didistatic.com/static/starimg/img/HCk75x3Mae1574152454711.jpg"
-      }, null, 2 /* CLASS */)
-    ], 46 /* CLASS, STYLE, PROPS, HYDRATE_EVENTS */, ["onPan"])
+    }, null, 46 /* CLASS, STYLE, PROPS, HYDRATE_EVENTS */, ["onPan"])
   ], 2 /* CLASS */))
 })
 

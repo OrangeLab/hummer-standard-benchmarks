@@ -253,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
     
     /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((function(){
       
-    var ruleSetMap = {"global":{"tagList":[],"classList":[],"idList":[],"attrList":[]},"data-v-79e40925":{"tagList":[],"classList":[{"selector":"animation-wrapper","matchType":0,"relation":"","style":{"flex-direction":"row","flex-wrap":"wrap"}}],"idList":[],"attrList":[]}};
+    var ruleSetMap = {"global":{"tagList":[],"classList":[],"idList":[],"attrList":[]},"data-v-79e40925":{"tagList":[],"classList":[{"selector":"animation-wrapper","matchType":0,"relation":"","style":{"width":"100%","display":"flex","justify-content":"center","align-items":"center","margin-top":"10","padding":"10 0","background-color":"#dcf5f1"}}],"idList":[],"attrList":[]}};
     var options = {"scoped":true,"id":"data-v-79e40925"};
   
       return (0,_hummer_tenon_vue__WEBPACK_IMPORTED_MODULE_0__.collectStyle)(ruleSetMap, options);

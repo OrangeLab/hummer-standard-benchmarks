@@ -1,9 +1,6 @@
 <template>
   <view class="page">
     <view class="demo-item" :style="curPositionStyle" @pan="handlePan">
-      <!-- <text>x: {{positionX}}</text>
-      <text>y: {{positionY}}</text> -->
-      <image class="image-item" src="https://pt-starimg.didistatic.com/static/starimg/img/HCk75x3Mae1574152454711.jpg"></image>
     </view>
   </view>
 </template>
