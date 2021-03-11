@@ -1,18 +1,11 @@
 <template>
   <view class="rotate-animation-wrapper" v-animation="keyframeAnimation">
-    <text v-if="index > -1" style="text-align: center">{{ index }}</text>
   </view>
 </template>
 
 <script>
 export default {
   name: "AnimationRotate",
-  props: {
-    index: {
-      type: Number,
-      default: -1
-    }
-  },
   data() {
     return {
       keyframeAnimation: {

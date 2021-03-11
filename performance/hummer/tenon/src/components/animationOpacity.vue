@@ -1,18 +1,11 @@
 <template>
   <view class="opacity-animation-wrapper" v-animation="keyframeAnimation">
-    <text v-if="index > -1" style="text-align: center">{{ index }}</text>
   </view>
 </template>
 
 <script>
 export default {
   name: "AnimationOpacity",
-  props: {
-    index: {
-      type: Number,
-      default: -1
-    }
-  },
   data() {
     return {
       keyframeAnimation: {
