@@ -2,6 +2,10 @@
   <scroller>
     <view class="cube-wrapper" v-for="(item, index) in aniArr" :key="index">
       <text class="cube-text">{{ index }}</text>
+      <text class="cube-text">{{ index }}</text>
+      <text class="cube-text">{{ index }}</text>
+      <text class="cube-text">{{ index }}</text>
+      <text class="cube-text">{{ index }}</text>
     </view>
   </scroller>
 </template>
