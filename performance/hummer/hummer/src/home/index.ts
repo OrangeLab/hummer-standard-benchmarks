@@ -74,9 +74,7 @@ class RootView extends View {
         btn11.text = "Tenon: 列表基准测试（Scroller）";
         btn11.addEventListener('tap', (event) => {
             let pageInfo = {
-                // url: './bench-list-scroller.js',
-                url: './bench-list-image.js',
-                // url: 'http://172.23.165.96:8000/bench-list-image.js',
+                url: './tenon/scroller.js',
             };
             Navigator.openPage(pageInfo);
         })
@@ -86,7 +84,7 @@ class RootView extends View {
         btn12.text = "Tenon: 列表基准测试（List）";
         btn12.addEventListener('tap', (event) => {
             let pageInfo = {
-                url: './bench-list.js',
+                url: './tenon/list.js',
             };
             Navigator.openPage(pageInfo);
         })
@@ -96,7 +94,7 @@ class RootView extends View {
         btn13.text = "Tenon: 动画基准测试";
         btn13.addEventListener('tap', (event) => {
             let pageInfo = {
-                url: './bench-animation.js',
+                url: './tenon/animation.js',
             };
             Navigator.openPage(pageInfo);
         })
@@ -106,7 +104,7 @@ class RootView extends View {
         btn14.text = "Tenon: 拖拽基准测试";
         btn14.addEventListener('tap', (event) => {
             let pageInfo = {
-                url: './bench-interaction.js',
+                url: './tenon/drag.js',
             };
             Navigator.openPage(pageInfo);
         })

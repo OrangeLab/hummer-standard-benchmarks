@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 29);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,7 +92,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/XiaoFeng/work/Android/DiDi/OpenSource/hummer-standard-benchmarks/performance/weex/vue/src/components/animationBackground.vue"
+__vue_options__.__file = "/Users/didi/Desktop/Tenon/hummer-standard-benchmarks/performance/weex/vue/src/components/animationBackground.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__["@render"] = __vue_template__["@render"]
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
@@ -122,7 +122,8 @@ module.exports = {
     "marginRight": 10,
     "marginBottom": 10,
     "marginLeft": 10,
-    "backgroundColor": "#15D0B4"
+    "backgroundColor": "#15D0B4",
+    "justifyContent": "center"
   }
 }
 
@@ -251,7 +252,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/XiaoFeng/work/Android/DiDi/OpenSource/hummer-standard-benchmarks/performance/weex/vue/src/components/animationPosition.vue"
+__vue_options__.__file = "/Users/didi/Desktop/Tenon/hummer-standard-benchmarks/performance/weex/vue/src/components/animationPosition.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__["@render"] = __vue_template__["@render"]
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
@@ -281,7 +282,8 @@ module.exports = {
     "marginRight": 10,
     "marginBottom": 10,
     "marginLeft": 10,
-    "backgroundColor": "#15D0B4"
+    "backgroundColor": "#15D0B4",
+    "justifyContent": "center"
   }
 }
 
@@ -410,7 +412,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/XiaoFeng/work/Android/DiDi/OpenSource/hummer-standard-benchmarks/performance/weex/vue/src/components/animationOpacity.vue"
+__vue_options__.__file = "/Users/didi/Desktop/Tenon/hummer-standard-benchmarks/performance/weex/vue/src/components/animationOpacity.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__["@render"] = __vue_template__["@render"]
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
@@ -440,7 +442,8 @@ module.exports = {
     "marginRight": 10,
     "marginBottom": 10,
     "marginLeft": 10,
-    "backgroundColor": "#15D0B4"
+    "backgroundColor": "#15D0B4",
+    "justifyContent": "center"
   }
 }
 
@@ -569,7 +572,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/XiaoFeng/work/Android/DiDi/OpenSource/hummer-standard-benchmarks/performance/weex/vue/src/components/animationRotate.vue"
+__vue_options__.__file = "/Users/didi/Desktop/Tenon/hummer-standard-benchmarks/performance/weex/vue/src/components/animationRotate.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__["@render"] = __vue_template__["@render"]
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
@@ -599,7 +602,8 @@ module.exports = {
     "marginRight": 10,
     "marginBottom": 10,
     "marginLeft": 10,
-    "backgroundColor": "#15D0B4"
+    "backgroundColor": "#15D0B4",
+    "justifyContent": "center"
   }
 }
 
@@ -702,21 +706,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 16 */
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(17)
+__vue_styles__.push(__webpack_require__(21)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(18)
+__vue_exports__ = __webpack_require__(22)
 
 /* template */
-var __vue_template__ = __webpack_require__(19)
+var __vue_template__ = __webpack_require__(23)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -728,7 +736,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/XiaoFeng/work/Android/DiDi/OpenSource/hummer-standard-benchmarks/performance/weex/vue/src/components/AnimationScale.vue"
+__vue_options__.__file = "/Users/didi/Desktop/Tenon/hummer-standard-benchmarks/performance/weex/vue/src/components/AnimationScale.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__["@render"] = __vue_template__["@render"]
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
@@ -747,7 +755,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 17 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -758,12 +766,13 @@ module.exports = {
     "marginRight": 10,
     "marginBottom": 10,
     "marginLeft": 10,
-    "backgroundColor": "#15D0B4"
+    "backgroundColor": "#15D0B4",
+    "justifyContent": "center"
   }
 }
 
 /***/ }),
-/* 18 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -825,7 +834,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 19 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -861,13 +870,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 20 */
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _animation = __webpack_require__(21);
+var _animation = __webpack_require__(30);
 
 var _animation2 = _interopRequireDefault(_animation);
 
@@ -877,21 +891,21 @@ _animation2.default.el = '#root';
 new Vue(_animation2.default);
 
 /***/ }),
-/* 21 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(22)
+__vue_styles__.push(__webpack_require__(31)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(23)
+__vue_exports__ = __webpack_require__(32)
 
 /* template */
-var __vue_template__ = __webpack_require__(24)
+var __vue_template__ = __webpack_require__(33)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -903,7 +917,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/XiaoFeng/work/Android/DiDi/OpenSource/hummer-standard-benchmarks/performance/weex/vue/src/components/animation.vue"
+__vue_options__.__file = "/Users/didi/Desktop/Tenon/hummer-standard-benchmarks/performance/weex/vue/src/components/animation.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-1dad81a4"
@@ -921,7 +935,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 22 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -932,7 +946,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 23 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -958,7 +972,7 @@ var _animationRotate = __webpack_require__(12);
 
 var _animationRotate2 = _interopRequireDefault(_animationRotate);
 
-var _AnimationScale = __webpack_require__(16);
+var _AnimationScale = __webpack_require__(20);
 
 var _AnimationScale2 = _interopRequireDefault(_AnimationScale);
 
@@ -994,7 +1008,7 @@ exports.default = {
 //
 
 /***/ }),
-/* 24 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1005,7 +1019,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, _vm._l((_vm.aniArr), function(item, index) {
     return _c('div', {
       key: index
-    }, [(index % 5 === 0) ? _c('AnimationBackground') : _vm._e(), (index % 5 === 1) ? _c('AnimationPosition') : _vm._e(), (index % 5 === 2) ? _c('AnimationOpacity') : _vm._e(), (index % 5 === 3) ? _c('AnimationRotate') : _vm._e(), (index % 5 === 4) ? _c('AnimationScale') : _vm._e()], 1)
+    }, [(index % 5 === 0) ? _c('AnimationPosition') : _vm._e(), (index % 5 === 1) ? _c('AnimationRotate') : _vm._e(), (index % 5 === 2) ? _c('AnimationScale') : _vm._e(), (index % 5 === 3) ? _c('AnimationOpacity') : _vm._e(), (index % 5 === 4) ? _c('AnimationBackground') : _vm._e()], 1)
   }))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true

@@ -1,16 +1,6 @@
 <template>
   <view class="page">
     <ex-list class="list" :data="list">
-      <template v-slot:refresh>
-        <view>
-          <text>———— 下拉刷新 ————</text>
-        </view>
-      </template>
-      <template v-slot:loadmore>
-        <view>
-          <text>———— 我也是有底线的 ————</text>
-        </view>
-      </template>
       <template v-slot:item="item">
         <view class="list-item">
           <BaseCube :index=item.index></BaseCube>
