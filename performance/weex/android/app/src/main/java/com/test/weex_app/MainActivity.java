@@ -1,7 +1,9 @@
 package com.test.weex_app;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
@@ -12,6 +14,8 @@ import com.taobao.weex.WXSDKEngine;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.common.WXRenderStrategy;
 import com.taobao.weex.utils.WXFileUtils;
+
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity implements IWXRenderListener {
 
@@ -36,8 +40,21 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
     }
 
     private void initData() {
-        if (getIntent() != null && getIntent().hasExtra("BundleName")) {
-            mBundleAssetsName = getIntent().getStringExtra("BundleName");
+        if (getIntent() != null) {
+            Uri uri = getIntent().getData();
+            if (uri != null) {
+                String path = uri.getPath();
+                if (!TextUtils.isEmpty(path)) {
+                    if (path.startsWith("/")) {
+                        path = path.substring(1);
+                    }
+                    mBundleAssetsName = path;
+                }
+            } else {
+                if (getIntent().hasExtra("BundleName")) {
+                    mBundleAssetsName = getIntent().getStringExtra("BundleName");
+                }
+            }
         }
     }
 
