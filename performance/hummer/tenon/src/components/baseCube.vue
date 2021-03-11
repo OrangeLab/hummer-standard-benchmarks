@@ -1,7 +1,5 @@
 <template>
-  <view class="background-animation-wrapper" v-animation="keyframeAnimation">
-    <text v-if="index > -1" style="text-align: center">{{ index }}</text>
-  </view>
+    <text style="width: 34;height: 34;margin: 0 12;background-color: #15d0b4;justify-content: center;text-align: center">{{ index }}</text>
 </template>
 
 <script>
@@ -17,11 +15,4 @@ export default {
 </script>
 
 <style scoped>
-.background-animation-wrapper {
-  width: 34;
-  height: 34;
-  margin: 0 12;
-  background-color: #15d0b4;
-  justify-content: center;
-}
 </style>
