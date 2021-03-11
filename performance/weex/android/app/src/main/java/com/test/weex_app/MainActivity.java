@@ -23,10 +23,6 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
     private Handler mHandler = new Handler();
 
     private String mBundleAssetsName = "index.js";
-//    private String mBundleAssetsName = "components/scroller.js";
-//    private String mBundleAssetsName = "components/list.js";
-//    private String mBundleAssetsName = "components/animation.js";
-//    private String mBundleAssetsName = "components/drag.js";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
                     mBundleAssetsName = path;
                 }
             } else {
+                // 添加这个逻辑是为了测试页面启动耗时的时候，可以直接通过am命令来启动页面，通过logcat过滤Displayed来查看页面启动耗时
+                // 如：adb shell am start -n com.test.weex_performance/com.test.weex_app.MainActivity -e BundleName components/scroller.js
                 if (getIntent().hasExtra("BundleName")) {
                     mBundleAssetsName = getIntent().getStringExtra("BundleName");
                 }

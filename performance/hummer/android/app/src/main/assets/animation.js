@@ -537,7 +537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ITEM_COUNT = 1000;
+var ITEM_COUNT = 500;
 
 var RootView = /*#__PURE__*/function (_Scroller) {
   (0,_usr_local_lib_node_modules_hummer_cli_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_1__.default)(RootView, _Scroller);

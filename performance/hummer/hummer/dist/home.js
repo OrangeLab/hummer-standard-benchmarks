@@ -425,9 +425,7 @@ var RootView = /*#__PURE__*/function (_View) {
     btn11.text = "Tenon: 列表基准测试（Scroller）";
     btn11.addEventListener('tap', function (event) {
       var pageInfo = {
-        // url: './bench-list-scroller.js',
-        url: './bench-list-image.js' // url: 'http://172.23.165.96:8000/bench-list-image.js',
-
+        url: './tenon/scroller.js'
       };
       _hummer_hummer_front__WEBPACK_IMPORTED_MODULE_3__.Navigator.openPage(pageInfo);
     });
@@ -436,7 +434,7 @@ var RootView = /*#__PURE__*/function (_View) {
     btn12.text = "Tenon: 列表基准测试（List）";
     btn12.addEventListener('tap', function (event) {
       var pageInfo = {
-        url: './bench-list.js'
+        url: './tenon/list.js'
       };
       _hummer_hummer_front__WEBPACK_IMPORTED_MODULE_3__.Navigator.openPage(pageInfo);
     });
@@ -445,7 +443,7 @@ var RootView = /*#__PURE__*/function (_View) {
     btn13.text = "Tenon: 动画基准测试";
     btn13.addEventListener('tap', function (event) {
       var pageInfo = {
-        url: './bench-animation.js'
+        url: './tenon/animation.js'
       };
       _hummer_hummer_front__WEBPACK_IMPORTED_MODULE_3__.Navigator.openPage(pageInfo);
     });
@@ -454,7 +452,7 @@ var RootView = /*#__PURE__*/function (_View) {
     btn14.text = "Tenon: 拖拽基准测试";
     btn14.addEventListener('tap', function (event) {
       var pageInfo = {
-        url: './bench-interaction.js'
+        url: './tenon/drag.js'
       };
       _hummer_hummer_front__WEBPACK_IMPORTED_MODULE_3__.Navigator.openPage(pageInfo);
     });
