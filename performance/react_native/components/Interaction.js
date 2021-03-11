@@ -40,23 +40,10 @@ const App = () => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    height: "100%",
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "red"
-  },
-  titleText: {
-    fontSize: 14,
-    lineHeight: 24,
-    fontWeight: "bold"
-  },
   box: {
-    height: 150,
-    width: 150,
-    backgroundColor: "blue",
+    width: 100,
+    height: 100,
+    backgroundColor: "#15D0B4",
     borderRadius: 5
   }
 });

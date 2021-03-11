@@ -16,11 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
+        print("didFinishLaunchingWithOptions");
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         let vc = ViewController.init()
         let path = Bundle.main.path(forResource: "main", ofType: "jsbundle")
-        let rctView:RCTRootView = .init(bundleURL: URL.init(string: path!)!, moduleName: "AwesomeProject", initialProperties: nil, launchOptions: nil)
+        let rctView:RCTRootView = .init(bundleURL: URL.init(string: path!)!, moduleName: "benchmarkReactNative", initialProperties: nil, launchOptions: nil)
         vc.view = rctView
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()

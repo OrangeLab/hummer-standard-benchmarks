@@ -1,13 +1,32 @@
 {
-  "name": "MyReactNativeApp",
+  "name": "awesome-project",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "yarn react-native start"
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "build:android": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "build:ios": "npx react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ios/assets/main.jsbundle"
   },
   "dependencies": {
     "react": "16.13.1",
-    "react-native": "^0.63.4",
+    "react-native": "0.63.4",
     "react-router-native": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }
