@@ -8,11 +8,11 @@ import 'package:flutter_app/drag.dart';
 void main() {
   // runApp(HomeApp());
   runApp(MaterialApp(
-    home: HomeApp(), // becomes the route named '/'
+    // home: HomeApp(), // becomes the route named '/'
     // home: ScrollerApp(), // becomes the route named '/'
     // home: ListApp(), // becomes the route named '/'
     // home: AnimApp(), // becomes the route named '/'
-    // home: DragApp(), // becomes the route named '/'
+    home: DragApp(), // becomes the route named '/'
     routes: <String, WidgetBuilder>{
       '/a': (BuildContext context) => AnimApp(),
       // '/b': (BuildContext context) => AnimApp(),

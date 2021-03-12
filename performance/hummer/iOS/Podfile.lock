@@ -1,0 +1,34 @@
+PODS:
+  - Hummer (0.2.4):
+    - Hummer/Core (= 0.2.4)
+  - Hummer/Core (0.2.4):
+    - SocketRocket (~> 0.1)
+    - Yoga (~> 1.14)
+  - SocketRocket (0.5.1)
+  - Yoga (1.14.0)
+
+DEPENDENCIES:
+  - "Hummer (from `git@git.xiaojukeji.com:Hummer/hummer-ios.git`)"
+
+SPEC REPOS:
+  "git@git.xiaojukeji.com:mirror-pod/Spec.git":
+    - SocketRocket
+    - Yoga
+
+EXTERNAL SOURCES:
+  Hummer:
+    :git: "git@git.xiaojukeji.com:Hummer/hummer-ios.git"
+
+CHECKOUT OPTIONS:
+  Hummer:
+    :commit: 090f442c090c7c8978ee9f38e5b27742e44d0a83
+    :git: "git@git.xiaojukeji.com:Hummer/hummer-ios.git"
+
+SPEC CHECKSUMS:
+  Hummer: c340a0e659b3aff803d1fadb943be8772e02e337
+  SocketRocket: 09d32e348102518bf0a754df80ed678ee716f19d
+  Yoga: fead0a4d2d92c65fc24617f9baa951671b582a1c
+
+PODFILE CHECKSUM: 54de549f2debbe7601e1d42171af5ff5b208eb40
+
+COCOAPODS: 1.9.3
