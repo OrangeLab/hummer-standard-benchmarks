@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.KeyEvent;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,11 +27,12 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
     private ReactRootView mReactRootView;
     private ReactInstanceManager mReactInstanceManager;
 
-    private String mBundleAssetsName = "app.android.bundle";
+    private String mBundleAssetsName = "index.android.bundle";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.v("zdf", "onCreate");
 //        setContentView(R.layout.activity_main);
 
 //        checkOverlayPermission();
@@ -56,12 +58,20 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
                 .build();
         // 注意这里的MyReactNativeApp 必须对应"index.js"中的
         // "AppRegistry.registerComponent()"的第一个参数
-        mReactRootView.startReactApplication(mReactInstanceManager, "AwesomeProject", null);
+        mReactRootView.startReactApplication(mReactInstanceManager, "benchmarkReactNative", null);
 
         setContentView(mReactRootView);
     }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        Log.v("zdf", "onWindowFocusChanged");
+    }
+
     private void initData() {
+        // 添加这个逻辑是为了测试页面启动耗时的时候，可以直接通过am命令来启动页面，通过logcat过滤Displayed来查看页面启动耗时
+        // 如：adb shell am start -n com.test.rn_performance/com.test.rn_app.MainActivity -e BundleName scroller.android.bundle
         if (getIntent() != null && getIntent().hasExtra("BundleName")) {
             mBundleAssetsName = getIntent().getStringExtra("BundleName");
         }
@@ -70,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
     @Override
     protected void onResume() {
         super.onResume();
+        Log.v("zdf", "onResume");
 
         if (mReactInstanceManager != null) {
             mReactInstanceManager.onHostResume(this, this);

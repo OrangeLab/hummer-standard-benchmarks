@@ -1,1 +1,8 @@
 .DS_Store
+
+## User settings
+xcuserdata/
+
+
+# pod
+Pods/
