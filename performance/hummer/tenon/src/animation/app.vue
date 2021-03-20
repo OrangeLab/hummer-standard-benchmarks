@@ -1,37 +1,20 @@
 <template>
   <scroller class="scroller">
     <view class="animation-wrapper">
-      <view v-for="(item, index) in aniArr" :key="index">
-        <AnimationPosition v-if="index % 5 === 0"></AnimationPosition>
-        <AnimationRotate v-if="index % 5 === 1"></AnimationRotate>
-        <AnimationScale v-if="index % 5 === 2"></AnimationScale>
-        <AnimationOpacity v-if="index % 5 === 3"></AnimationOpacity>
-        <AnimationBackground v-if="index % 5 === 4"></AnimationBackground>
-      </view>
+      <view class="background-animation-wrapper" v-animation="animations[index%5]" v-for="(item, index) in aniArr" :key="index"></view>
     </view>
   </scroller>
 </template>
 
 <script>
-import AnimationBackground from '../components/animationBackground'
-import AnimationPosition from '../components/animationPosition'
-import AnimationOpacity from '../components/animationOpacity'
-import AnimationRotate from '../components/animationRotate'
-import AnimationScale from '../components/AnimationScale'
-
+import {backgroundAnimation,positionAnimation,opacityAnimation,rotateAnimation,scaleAnimation} from './animation'
 const ARRAY_LENGTH = 500;
 
 export default {
   name: 'Animation',
-  components: {
-    AnimationBackground,
-    AnimationPosition,
-    AnimationOpacity,
-    AnimationRotate,
-    AnimationScale
-  },
   data () {
     return {
+      animations: [positionAnimation,rotateAnimation,scaleAnimation,opacityAnimation,backgroundAnimation],
       aniArr: new Array(ARRAY_LENGTH)
     }
   }
@@ -42,5 +25,11 @@ export default {
 .animation-wrapper{
   flex-direction: row;
   flex-wrap: wrap;
+}
+.background-animation-wrapper {
+  width: 34;
+  height: 34;
+  margin: 6;
+  background-color: #15d0b4;
 }
 </style>

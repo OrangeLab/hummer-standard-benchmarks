@@ -5,6 +5,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * 可以通过以下am命令单独启动某个子页面
+ * adb shell am start -n com.test.native_performance/com.test.native_app.ScrollPerformanceActivity
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

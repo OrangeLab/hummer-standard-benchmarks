@@ -1,7 +1,6 @@
 <template>
   <view class="page">
-    <view class="demo-item" :style="curPositionStyle" @pan="handlePan">
-    </view>
+    <view class="demo-item" :style="curPositionStyle" @pan="handlePan"></view>
   </view>
 </template>
 <style lang="less" scoped>

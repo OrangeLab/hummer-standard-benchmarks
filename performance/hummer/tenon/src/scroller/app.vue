@@ -14,7 +14,6 @@
 const ARRAY_LENGTH = 500;
 
 export default {
-  name: 'Animation',
   data () {
     return {
       aniArr: new Array(ARRAY_LENGTH)
@@ -27,8 +26,6 @@ export default {
 .cube-wrapper{
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 10;
   padding: 10 0;
   background-color: #dcf5f1;
@@ -38,7 +35,6 @@ export default {
   height: 34;
   margin: 0 12;
   background-color: #15d0b4;
-  justify-content: center;
   text-align:center;
 }
 </style>
