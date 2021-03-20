@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         Hummer.startEngine(nil);
-//        let path = Bundle.main.path(forResource: "/dist/drag", ofType: "js")
-        let path = Bundle.main.path(forResource: "/tenon-dist/scroller", ofType: "js")
+        let path = Bundle.main.path(forResource: "/dist/list", ofType: "js")
+//        let path = Bundle.main.path(forResource: "/tenon-dist/scroller", ofType: "js")
         let file = URL.init(fileURLWithPath: path!);
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         let vc = ViewController.init(url: file.absoluteString, params: nil)
