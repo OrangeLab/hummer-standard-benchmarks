@@ -75,30 +75,52 @@ class AnimationBenchMark: UIViewController {
                    CAKeyframeAnimation.alpha(),
                    CAKeyframeAnimation.backgroundColor()]
         
+        var x = 0;
+        var y = 0;
+        let lineSpace = 20;
+        let vSpace = 10;
         var i = 0;
-        for _ in 0...line {
+        let max = self.view.frame.size.width-16;
+        for _ in 0...500 {
+            let v = UIView.init()
+            v.frame = CGRect.init(x: x, y: y, width: 34, height: 34);
+            v.backgroundColor = .init(hexString: "#15D0B4")
+            v.layer.add(ans[i%5], forKey: String(i))
+            scroller.addSubview(v)
+            i += 1;
+            x += (34 + lineSpace)
             
-            let rowContainer = UIStackView.init()
-            rowContainer.axis = .horizontal
-            rowContainer.distribution = .equalSpacing
-            rowContainer.alignment = .center
-            rowContainer.frame = CGRect.init(x: 0, y: 0, width:stack.frame.size.width, height: 40)
-            for _ in 0...7 {
-                
-                let v = UIView.init()
-                v.backgroundColor = .init(hexString: "#15D0B4")
-                let width = NSLayoutConstraint.init(item: v, attribute:.width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 0, constant: 34)
-                let height = NSLayoutConstraint.init(item: v, attribute:.height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 0, constant: 34)
-                width.priority = .defaultHigh
-                height.priority = .defaultHigh
-                v.addConstraint(width)
-                v.addConstraint(height)
-                v.translatesAutoresizingMaskIntoConstraints = false;
-                rowContainer.addArrangedSubview(v)
-                v.layer.add(ans[i%5], forKey: String(i))
-                i += 1;
+            if x > Int(max-34) {
+                x = 0;
+                y += 34 + vSpace
             }
-            stack.addArrangedSubview(rowContainer)
         }
+        scroller.contentSize = .init(width: Int(width)-8, height: y)
+
+//        var i = 0;
+//        for _ in 0...line {
+//
+//            let rowContainer = UIStackView.init()
+//            rowContainer.axis = .horizontal
+//            rowContainer.distribution = .equalSpacing
+//            rowContainer.alignment = .center
+//            rowContainer.frame = CGRect.init(x: 0, y: 0, width:stack.frame.size.width, height: 40)
+//            for _ in 0...7 {
+//
+//                let v = UIView.init()
+//                v.backgroundColor = .init(hexString: "#15D0B4")
+//                let width = NSLayoutConstraint.init(item: v, attribute:.width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 0, constant: 34)
+//                let height = NSLayoutConstraint.init(item: v, attribute:.height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 0, constant: 34)
+//                width.priority = .defaultHigh
+//                height.priority = .defaultHigh
+//                v.addConstraint(width)
+//                v.addConstraint(height)
+//                v.translatesAutoresizingMaskIntoConstraints = false;
+//                rowContainer.addArrangedSubview(v)
+//                v.layer.add(ans[i%5], forKey: String(i))
+//                i += 1;
+//            }
+//            stack.addArrangedSubview(rowContainer)
+//        }
     }
 }

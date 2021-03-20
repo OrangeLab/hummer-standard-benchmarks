@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let millisecond = CLongLong(round(timeInterval*1000))
         print("####### start ######## %ld",millisecond)
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        let vc = DragBenchMark .init()
+        let vc = AnimationBenchMark .init()
         let nav = UINavigationController.init(rootViewController: vc);
         nav.navigationBar.isTranslucent = false;
         self.window?.rootViewController = nav
