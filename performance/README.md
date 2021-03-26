@@ -1,5 +1,5 @@
 ## 简介
-此目录下包含了五种不同的 APP 开发框架的工程项目（Native、Hummer、Tenon、ReactNative 和 Flutter），分别用这五种 APP 开发框架，针对四种不同的测试用例（见下面用例介绍），对四组不同维度的性能指标（首屏渲染时间、CPU、内存和帧率），分别做了各自benchmark性能测试，并且保存了相关测试数据。其中每个 App 开发框架，都包含了 Android 和 iOS 两端的工程项目。
+此目录下包含了五种不同的 APP 开发框架的工程项目（**Native**、**Hummer**、**Tenon**、**ReactNative** 和 **Flutter**），分别用这五种 APP 开发框架，针对四种不同的测试用例（见下面用例介绍），对四组不同维度的性能指标（**首屏渲染时间**、**CPU**、**内存和帧率**），分别做了各自benchmark性能测试，并且保存了相关测试数据。其中每个 App 开发框架，都包含了 **Android** 和 **iOS** 两端的工程项目。
 
 ## 用例介绍
 - **用例1：** 列表基准测试（Scroller）。列表中500行视图，每一行视图中包含5个子视图，测试快速滚动整个列表时的性能。
@@ -29,7 +29,7 @@
 
 | 首页 | 用例1 | 用例2 | 用例3 | 用例4 |
 | ---- | ---- | ---- | ---- | ---- |
-| ![首页](https://pt-starimg.didistatic.com/static/starimg/img/g8EfVbEfQs1616724569756.jpg) | ![用例1](https://pt-starimg.didistatic.com/static/starimg/img/3ckhTcrdFG1616724602559.jpg) | ![用例2](https://pt-starimg.didistatic.com/static/starimg/img/2jOpoMZEl41616724649513.jpg) | ![用例3](https://pt-starimg.didistatic.com/static/starimg/img/rVdjjLuI6b1616724667554.jpg) | ![用例4](https://pt-starimg.didistatic.com/static/starimg/img/9eH9nxm1ow1616724687935.jpg)
+| ![首页](https://pt-starimg.didistatic.com/static/starimg/img/g8EfVbEfQs1616724569756.jpg) | ![用例1](https://pt-starimg.didistatic.com/static/starimg/img/3ckhTcrdFG1616724602559.jpg) | ![用例2](https://pt-starimg.didistatic.com/static/starimg/img/2jOpoMZEl41616724649513.jpg) | ![用例3](https://pt-starimg.didistatic.com/static/starimg/img/rVdjjLuI6b1616724667554.jpg) | ![用例4](https://pt-starimg.didistatic.com/static/starimg/img/9eH9nxm1ow1616724687935.jpg) |
 
 ## 测试结果
 （待补充）
