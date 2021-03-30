@@ -84,8 +84,8 @@ class ItemCell extends Text {
     constructor() {
         super();
         this.style = {
-            width: 30,
-            height: 30,
+            width: 34,
+            height: 34,
             backgroundColor: Color.hm_green,
             textAlign: 'center',
             marginLeft: 16,

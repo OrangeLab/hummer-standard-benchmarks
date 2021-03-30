@@ -12,17 +12,19 @@ class RootView extends View {
             height: '100%',
         }
 
+        let _scroller = new Scroller()
         let scroller = new Scroller();
-        scroller.style = {
-            width: '100%',
-            height: '100%',
-        }
+        // scroller.style = {
+        //     width: '100%',
+        //     height: '100%',
+        // }
 
         for (let i = 0; i < ITEM_COUNT; i++) {
             scroller.appendChild(new ItemLayout(i));
         }
 
-        this.appendChild(scroller)
+        this.appendChild(_scroller)
+        _scroller.appendChild(scroller)
     }
 }
 
@@ -57,8 +59,8 @@ class ItemCell extends Text {
         super();
         this.text = "" + index;
         this.style = {
-            width: 30,
-            height: 30,
+            width: 34,
+            height: 34,
             backgroundColor: Color.hm_green,
             textAlign: 'center',
             marginLeft: 16,
