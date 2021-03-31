@@ -4,7 +4,7 @@
 ## 用例介绍
 - **用例1：** 列表基准测试（Scroller）。列表中500行视图，每一行视图中包含5个子视图，测试快速滚动整个列表时的性能。
 - **用例2：** 列表视图基准测试（List）。列表中1000行视图，每一行视图中包含5个子视图，测试快速滚动整个列表时的性能。
-- **用例3：** 动画基准测试。500个视图，分别同时做5种动画，测试动画执行时的性能。
+- **用例3：** 动画基准测试。500个视图，每个视图分别做5种动画中的其中1种，测试所有动画同时执行时的性能。
 - **用例4：** 拖拽基准测试。测试在屏幕范围内拖拽一个视图时的性能。
 
 ## 测试机型
@@ -29,7 +29,7 @@
 
 | 首页 | 用例1 | 用例2 | 用例3 | 用例4 |
 | ---- | ---- | ---- | ---- | ---- |
-| ![首页](https://pt-starimg.didistatic.com/static/starimg/img/g8EfVbEfQs1616724569756.jpg) | ![用例1](https://pt-starimg.didistatic.com/static/starimg/img/3ckhTcrdFG1616724602559.jpg) | ![用例2](https://pt-starimg.didistatic.com/static/starimg/img/2jOpoMZEl41616724649513.jpg) | ![用例3](https://pt-starimg.didistatic.com/static/starimg/img/rVdjjLuI6b1616724667554.jpg) | ![用例4](https://pt-starimg.didistatic.com/static/starimg/img/9eH9nxm1ow1616724687935.jpg) |
+| ![首页](../screenshots/screenshot_native_home.jpg) | ![用例1](../screenshots/screenshot_native_scroller.gif) | ![用例2](../screenshots/screenshot_native_list.gif) | ![用例3](../screenshots/screenshot_native_animation.gif) | ![用例4](../screenshots/screenshot_native_drag.gif) |
 
 ## 测试结果
 （待补充）
