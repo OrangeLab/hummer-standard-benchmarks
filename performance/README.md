@@ -32,5 +32,68 @@
 | ![首页](../screenshots/screenshot_native_home.jpg) | ![用例1](../screenshots/screenshot_native_scroller.gif) | ![用例2](../screenshots/screenshot_native_list.gif) | ![用例3](../screenshots/screenshot_native_animation.gif) | ![用例4](../screenshots/screenshot_native_drag.gif) |
 
 ## 测试结果
-（待补充）
+无论是 Android 端还是 iOS 端，Hummer 和 Tenon 的整体表现，基本都很接近原生性能，足以见得 Hummer 的强大之处。
+
+#### Android
+| 用例1 (Scroller) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
+|-|-|-|-|-|-|-|
+| 页面渲染时间(首次, ms) | 741 | 1835 | 2617 | 1664 | <font color="#f00000"><b>2834</b></font> | <font color="#00a000"><b>862</b></font> |
+| 页面渲染时间(非首次, ms) | 590 | 1560 | 2182 | 1508 | <font color="#f00000"><b>2579</b></font> | <font color="#00a000"><b>568</b></font> |
+| CPU(%) | 7.53 | 10.72 | 10.69 | 11.7 | 10.11 | 9.94 |
+| 内存(M) | 114.89 | <font color="#00a000"><b>133.45</b></font> | 137.94 | 167.8 | 178.5 | <font color="#f00000"><b>210.17</b></font> |
+| 帧率(fps) | 58 | 50 | 51 | 47 | 49 | <font color="#f00000"><b>31</b></font> |
+
+| 用例2 (List) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
+|-|-|-|-|-|-|-|
+| 页面渲染时间(首次, ms) | 334 | <font color="#00a000"><b>387</b></font> | 559 | 545 | <font color="#f00000"><b>3477</b></font> | 535 |
+| 页面渲染时间(非首次, ms) | 170 | <font color="#00a000"><b>215</b></font> | 335 | 368 | <font color="#f00000"><b>3238</b></font> | <font color="#00a000"><b>215</b></font> |
+| CPU(%) | 4.07 | <font color="#00a000"><b>4.85</b></font> | 6.85 | <font color="#f00000"><b>14.43</b></font> | 5.08 | 10.44 |
+| 内存(M) | 58.14 | <font color="#00a000"><b>64.62</b></font> | 70.48 | 173.89 | <font color="#f00000"><b>224.08</b></font> | 152.38 |
+| 帧率(fps) | 60 | 60 | 60 | 58 | 60 | 59 |
+
+| 用例3 (动画) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
+|-|-|-|-|-|-|-|
+| 页面渲染时间(首次, ms) | 345 | 641 | 1044 | 778 | <font color="#f00000"><b>1881</b></font> | <font color="#00a000"><b>538</b></font> |
+| 页面渲染时间(非首次, ms) | 195 | 385 | 730 | 636 | <font color="#f00000"><b>1394</b></font> | <font color="#00a000"><b>224</b></font> |
+| CPU(%) | 14.27 | <font color="#00a000"><b>15.48</b></font> | 15.3 | <font color="#f00000"><b>33.31</b></font> | 17.22 | 18.58 |
+| 内存(M) | 86.9 | <font color="#00a000"><b>88.97</b></font> | 102.53 | 118.75 | 102.56 | <font color="#f00000"><b>172.28</b></font> |
+| 帧率(fps) | 30 | 30 | 30 | 31 | 29 | 30 |
+
+| 用例4 (拖拽) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
+|-|-|-|-|-|-|-|
+| 页面渲染时间(首次, ms) | 253 | <font color="#00a000"><b>310</b></font> | 342 | 425 | 396 | <font color="#f00000"><b>514</b></font> |
+| 页面渲染时间(非首次, ms) | 168 | <font color="#00a000"><b>175</b></font> | 183 | <font color="#f00000"><b>287</b></font> | 185 | 213 |
+| CPU(%) | 3.03 | 5.19 | 6 | 7.51 | 5.96 | 6.94 |
+| 内存(M) | 55.55 | <font color="#00a000"><b>63.16</b></font> | 66.5 | 102.17 | 66.57 | <font color="#f00000"><b>142.21</b></font> |
+| 帧率(fps) | 60 | 60 | 59 | 60 | 60 | 60 |
+
+
+#### iOS
+| 用例1 (Scroller) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
+|-|-|-|-|-|-|-|
+| 页面渲染时间(ms) | 1727 | 1970 | 2249 | <font color="#f00000"><b>2358</b></font> | 1694 | <font color="#00a000"><b>806</b></font> |
+| CPU(%) | 1.73 | 2 | 2 | 5.45 | 3.18 | <font color="#f00000"><b>8.18</b></font> |
+| 内存(M) | 116 | 149 | 156.27 | <font color="#f00000"><b>177.27</b></font> | 144 | <font color="#00a000"><b>125.18</b></font> |
+| 卡顿率(ms/s) | 1.667 | 1.667 | 1.668 | 1.678 | 1.668 | <font color="#00a000"><b>0</b></font> |
+
+| 用例2 (List) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
+|-|-|-|-|-|-|-|
+| 页面渲染时间(ms) | 469 | <font color="#00a000"><b>545</b></font> | 684 | 975 | <font color="#f00000"><b>4141</b></font> | 608 |
+| CPU(%) | 3.36 | <font color="#00a000"><b>5.64</b></font> | 5.82 | <font color="#f00000"><b>18.45</b></font> | 9.91 | 8.27 |
+| 内存(M) | 9.36 | <font color="#00a000"><b>21.18</b></font> | 23.55 | 88.36 | 91.55 | 91.82 |
+| 卡顿率(ms/s) | 0 | <font color="#00a000"><b>0</b></font> | 4.16 | <font color="#f00000"><b>7.59</b></font> | 3.419 | 2.902 |
+
+| 用例3 (动画) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
+|-|-|-|-|-|-|-|
+| 页面渲染时间(ms) | 773 | 905 | 1131 | 1353 | <font color="#f00000"><b>1535</b></font> | <font color="#00a000"><b>655</b></font> |
+| CPU(%) | 1.55 | 2 | 1.91 | <font color="#f00000"><b>30.55</b></font> | 6.73 | 8.45 |
+| 内存(M) | 6 | <font color="#00a000"><b>13</b></font> | 17.27 | 26 | 56.73 | <font color="#f00000"><b>81.73</b></font> |
+| 卡顿率(ms/s) | 0 | 0 | 0 | 0 | 0 | 0 |
+
+| 用例4 (拖拽) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
+|-|-|-|-|-|-|-|
+| 页面渲染时间(ms) | 539 | 563 | 578 | <font color="#f00000"><b>922</b></font> | 545 | 708 |
+| CPU(%) | 2 | 5.55 | 6.18 | 7.55 | 7.18 | 5 |
+| 内存(M) | 5 | 10 | 12 | 14 | 16 | <font color="#f00000"><b>54</b></font> |
+| 卡顿率(ms/s) | 0 | 0 | 0 | 0 | 0 | 0 |
 
