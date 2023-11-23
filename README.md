@@ -58,7 +58,7 @@
 | ![首页](https://pt-starimg.didistatic.com/static/starimg/img/bP1lmtIUhJ1617200790427.jpg) | ![用例1](https://pt-starimg.didistatic.com/static/starimg/img/i8mATdAG001617200903932.gif) | ![用例2](https://pt-starimg.didistatic.com/static/starimg/img/2kQHIOw60b1617200923921.gif) | ![用例3](https://pt-starimg.didistatic.com/static/starimg/img/Y7cYhEepQ61617200937730.gif) | ![用例4](https://pt-starimg.didistatic.com/static/starimg/img/zbv6NnJuSK1617200948418.gif) |
 
 ### 测试结果
-无论是 Android 端还是 iOS 端，Hummer 和 Tenon 的整体表现，基本都很接近原生性能，足以见得 Hummer 的强大之处。
+无论是 Android 端还是 iOS 端，Hummer 和 Tenon 的整体表现，基本都很接近原生性能。
 
 #### Android
 | 用例1 (Scroller) | Native | Hummer | Tenon | ReactNative | Weex | Flutter |
